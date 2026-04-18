@@ -89,20 +89,25 @@ order by 2 desc;
 **Customer Behavior**:
   - 59 customers with highly consistent purchase patterns (mostly 6–7 orders each)
   - Top customers contribute marginally more → low revenue concentration risk
+
 **Genre Preferences**:
   - Top genres: Rock, Latin, Metal, Alternative, Jazz
   - Rock dominates globally with 1,297 tracks
+
 **Country-Level Personalization Opportunity**:
   - Distinct top 3 genres per country identified
   - Enables localized recommendation strategies
+
 **Artist Dominance (High-Impact Insight)**:
   - Only 6 countries show strong artist dominance (≥20% share)
   - Iron Maiden dominates:
     - Australia (47.4%)
     - Portugal (21.15%)
+
 **Content & Catalog Insights**:
   - Top artists by catalog depth: Iron Maiden (21 albums), Led Zeppelin (14), Deep Purple (11)
   - Majority of tracks are MPEG audio files (3034)
+
 **Data Quality Insight**:
   - 978 tracks have unknown composers, indicating metadata gaps
  
