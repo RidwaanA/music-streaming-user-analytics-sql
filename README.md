@@ -24,6 +24,7 @@ Leadership needed clarity on:
 ## SQL Highlights
 ```sql
 // Top Genres by Country (User Preference Segmentation)
+
 select * 
 from (
 	select
@@ -40,7 +41,9 @@ from (
 where ranking <= 3;
 ```
 ```sql
+
 // Artist Market Share by Country (Dominance Analysis)
+
 with purchases as (
 	select
 		billing_country,
@@ -79,27 +82,27 @@ order by 2 desc;
 ```
 
 ## Key Insights
-- Revenue Concentration:
+**Revenue Concentration**:
   - Total revenue: $2,026.22
   - USA (22.4%) and Canada (13.5%) are the top revenue contributors
-- Customer Behavior:
+**Customer Behavior**:
   - 59 customers with highly consistent purchase patterns (mostly 6–7 orders each)
   - Top customers contribute marginally more → low revenue concentration risk
-- Genre Preferences:
+**Genre Preferences**:
   - Top genres: Rock, Latin, Metal, Alternative, Jazz
   - Rock dominates globally with 1,297 tracks
-- Country-Level Personalization Opportunity:
+**Country-Level Personalization Opportunity**:
   - Distinct top 3 genres per country identified
   - Enables localized recommendation strategies
-- Artist Dominance (High-Impact Insight):
+**Artist Dominance (High-Impact Insight)**:
   - Only 6 countries show strong artist dominance (≥20% share)
   - Iron Maiden dominates:
     - Australia (47.4%)
     - Portugal (21.15%)
-- Content & Catalog Insights:
+**Content & Catalog Insights**:
   - Top artists by catalog depth: Iron Maiden (21 albums), Led Zeppelin (14), Deep Purple (11)
   - Majority of tracks are MPEG audio files (3034)
-- Data Quality Insight:
+**Data Quality Insight**:
   - 978 tracks have unknown composers, indicating metadata gaps
  
 ## Recommendations
@@ -116,7 +119,6 @@ order by 2 desc;
  
 ## Outcome
 Delivered a customer and content analytics framework that:
-
 - ✅ Identifies revenue drivers and engagement patterns
 - ✅ Enables data-driven recommendation and acquisition strategies
 - ✅ Supports geographic expansion and personalization
