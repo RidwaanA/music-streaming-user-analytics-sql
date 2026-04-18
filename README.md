@@ -85,6 +85,7 @@ order by 2 desc;
 **Revenue Concentration**:
   - Total revenue: $2,026.22
   - USA (22.4%) and Canada (13.5%) are the top revenue contributors
+
 **Customer Behavior**:
   - 59 customers with highly consistent purchase patterns (mostly 6–7 orders each)
   - Top customers contribute marginally more → low revenue concentration risk
