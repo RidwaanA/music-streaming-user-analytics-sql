@@ -1,29 +1,29 @@
 # Music Streaming User Engagement & Revenue Performance Analysis
 
-# Project Overview
+## Project Overview
 Analyzed **user engagement**, **content consumption**, **and revenue performance** for a global music platform (**Don Beats**) **across 24 countries and 53 cities**.
 
 The project delivers **actionable insights on genre popularity, artist dominance, and customer spending behavior** to s**upport recommendation systems and artist acquisition decisions**.
 
-# 🧩 Business Problem
+## Business Problem
 Leadership needed clarity on:
 
 - Which genres and artists drive engagement and revenue
 - How preferences vary across countries
 - Where to focus content acquisition and promotions
 
-# 🗂 Data Overview
+## Data Overview
 - 59 customers, 412 invoices, 347 albums
 - Presence across 53 cities / 24 countries
-- Key data: customers, artists, albums, tracks, playlists, invoices
+- Key data: `customers`, `artists`, `albums`, `tracks`, `playlists`, `invoices`
 
-# 🛠 Tools & Technologies
+## Tools & Technologies
 - MySQL
 - SQL (joins, aggregations, window functions, ranking, CTEs)
 
-# SQL Highlights
-1. Top Genres by Country (User Preference Segmentation)
-
+## SQL Highlights
+```sql
+// Top Genres by Country (User Preference Segmentation)
 select * 
 from (
 	select
@@ -38,9 +38,9 @@ from (
 				join invoice I using(invoice_id)
 	group by 1,2,3) ranked
 where ranking <= 3;
-
-2. Artist Market Share by Country (Dominance Analysis)
-
+```
+```sql
+// Artist Market Share by Country (Dominance Analysis)
 with purchases as (
 	select
 		billing_country,
@@ -65,8 +65,9 @@ select
 from purchases
 group by 1,2,3
 having ratio >= 0.20
-
-3. Revenue Contribution by Country
+```
+```sql
+// Revenue Contribution by Country
 
 select
 	billing_country,
@@ -75,8 +76,9 @@ select
 from invoice
 group by 1
 order by 2 desc;
+```
 
-# 📈 Key Insights
+## Key Insights
 - Revenue Concentration:
   - Total revenue: $2,026.22
   - USA (22.4%) and Canada (13.5%) are the top revenue contributors
@@ -100,7 +102,7 @@ order by 2 desc;
 - Data Quality Insight:
   - 978 tracks have unknown composers, indicating metadata gaps
  
-# 💡 Recommendations
+## Recommendations
 - Localize recommendation engines
   - Use country-level genre preferences for personalization
 - Leverage dominant artists in key markets
@@ -112,14 +114,14 @@ order by 2 desc;
 - Target top revenue markets
   - Focus marketing and promotions on USA and Canada
  
-# Outcome
+## Outcome
 Delivered a customer and content analytics framework that:
 
-- Identifies revenue drivers and engagement patterns
-- Enables data-driven recommendation and acquisition strategies
-- Supports geographic expansion and personalization
+- ✅ Identifies revenue drivers and engagement patterns
+- ✅ Enables data-driven recommendation and acquisition strategies
+- ✅ Supports geographic expansion and personalization
 
-# Next Steps
+## Next Steps
 - Build recommendation engine prototypes
 - Develop dashboards for real-time engagement tracking
 - Implement user segmentation and churn analysis
